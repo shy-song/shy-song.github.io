@@ -42,8 +42,7 @@ ga('send', 'pageview');
 
 
 
-  <SCRIPT type=text/javascript src="/js/scrolltop.js"></SCRIPT>
-  
+   
 </head>
 <body>
   <div id="container">
@@ -107,7 +106,7 @@ ga('send', 'pageview');
       
         <h1 id="第0篇博客">第0篇博客</h1><p>历尽千辛万苦终于搭建好了这么一个简陋的博客，其实原本应该半小时内就可以实现的工作，结果耗了我4个小时，主要有两方面原因，其中之一是，我真的只是个小白；而第二呢，也是最最主要的原因，就是网上的教程良莠不齐，难得找到一两篇良的，结果都是基于windows系统的，连Linux都有，于是我当初就下定决心，待我搭建好了博客，得将我这苦逼心路历程都写下来，希望能帮助有同样建博客需求的Mac用户少走一些弯路。事不宜迟，即将开始：</p>
 <h2 id="安装xcode">安装xcode</h2><p>这个比较方便，直接在Mac App Store上搜索下载就ok，下载好了以后，启动并进入 Preferences -> Download -> Command Line Tools -> Install 安装命令行工具。</p>
-<h2 id="安装Git">安装Git</h2><p>使用Homebrew来安装即可。启动终端机，将下列代码：<br><code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code>黏贴进去，回车，稍等片刻，完成。</p>
+<h2 id="安装Git">安装Git</h2><p>使用Homebrew来安装即可。启动终端机，将下列代码：<br><code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code><br>黏贴进去，回车，稍等片刻，完成。</p>
 <h2 id="安装Node-js">安装Node.js</h2><p>官网推荐的安装方式是使用nvm。以下安装脚本二选一即可：<br>cURL:<br><code>$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh</code><br>Wget:<br><code>$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</code><br>安装完成后，重启终端机并执行下列命令即可：<br><code>$ nvm install</code><br>关于nvm其他安装方式的详情可点击：<a href="https://github.com/creationix/nvm" target="_blank" rel="external">https://github.com/creationix/nvm</a></p>
 <h2 id="安装Hexo">安装Hexo</h2><p>所有准备工作已搞定，终于来到高潮啦！正式可以使用npm来安装Hexo！只需输入：<br><code>$ npm install -g hexo-cli</code><br>若上述代码不能使用，可试试输入下面的：<br><code>$ npm install -g hexo</code><br>剩下的只是等待，让它自动安装完毕即可。</p>
 <h2 id="建站">建站</h2><p>安装Hexo后，又要再次打开终端机啦，我们需要让Hexo在指定文件夹中新建所需要的文件哟，建议是直接在finder中的个人专属新建一个名为“hexo”的文件夹即可，然后输入下列代码：<br><code>$ cd /hexo这里的hexo是表示新建的文件夹名字
@@ -142,10 +141,7 @@ ga('send', 'pageview');
 <h2 id="本地启动">本地启动</h2><p>执行以下命令，启动本地服务，即可预览文章，进行调试啦<br><code>$ hexo server</code><br>浏览器键入 <a href="#">http://localhost:4000</a> 可观察到效果。</p>
 <h2 id="将hexo构建的博客与github建立关联">将hexo构建的博客与github建立关联</h2><ol>
 <li>安装 hexo-deployer-git 。终端机输入：<br><code>$ npm install hexo-deployer-git --save</code></li>
-<li>修改<em>config.yml</em>设置：<br>用xcode打开文件，按以下项目修改：<br><code>deploy:
-``  type: git
-``  repo: &lt;repository url&gt;  从github账户可查询到，建议使用https
-``  branch:  一般来说，是master，也可从github账户查询到</code></li>
+<li>修改<em>config.yml</em>设置：<br>用xcode打开文件，按以下项目修改：<br><code>deploy:</code><br><code>type: git</code><br><code>repo: &lt;repository url&gt;  从github账户可查询到，建议使用https</code><br><code>branch:  一般来说，是master，也可从github账户查询到</code></li>
 <li><p>保存退出；</p>
 </li>
 <li><p>在终端机输入以下代码：<br><code>$ hexo deploy</code>如果显示done的话，那就圆满啦！！我看到成功信息的时候，真有种想哭的冲动啊！</p>
