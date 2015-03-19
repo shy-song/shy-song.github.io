@@ -1,4 +1,4 @@
- (function($) {
+(function($) {
     // When to show the scroll link
     // higher number = scroll link appears further down the page
     var upperLimit = 1000;
@@ -14,15 +14,15 @@
     $(window).scroll(function () {
                    var scrollTop = $(document).scrollTop();
                    if ( scrollTop > upperLimit ) {
-                     $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                            $(scrollElem).stop().fadeTo(300, 1); // fade back in
                    }else{
-                     $(scrollElem).stop().fadeTo(300, 0); // fade out
+                            $(scrollElem).stop().fadeTo(300, 0); // fade out
                    }
     });
   
   // Scroll to top animation on click
   $(scrollElem).click(function(){
-                      $('html, body').animate({scrollTop:0}, scrollSpeed); return false;
+        $('html, body').animate({scrollTop:0}, scrollSpeed); return false;
     });
 
-  })(jQuery);
+})(jQuery);
