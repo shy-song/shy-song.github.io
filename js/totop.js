@@ -1,4 +1,4 @@
- (function($) {
+ $(function() {
   // When to show the scroll link
   // higher number = scroll link appears further down the page
   var upperLimit = 150;
@@ -20,7 +20,10 @@
                    }
                    });
   // Scroll to top animation on click
-  $(scrollElem).oneclick(function(){
-                      $('body,html').animate({scrollTop:0}, scrollSpeed); return false;
+  $(scrollElem).click(function(){
+                      $('body,html').animate({scrollTop:0
+                    },
+                    scrollSpeed);
+                    return false;
                       });
   })(jQuery);
